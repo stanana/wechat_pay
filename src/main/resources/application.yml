@@ -1,10 +1,19 @@
-server:
-  port: 8888 #修改端口号 注意冒号后面需要有空格
+﻿server:
+  port: 8888
+  servlet:
+    context-path: /sell
 
-#日志配置
-#logging:
-#  pattern:
-#    console: "%d-%msg%n"  #  控制台输出配置,%d：日期，%msg：信息 %n:换行
-#  file: D://weixin_sell//log//logback.log #日志输出文件位置
-#  level:
-#    root: debug #日志级别
+spring:
+  druid:
+    url: jdbc:mysql://192.168.1.151:3306/sell?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT
+#    driverClassName: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+    maxActive: 30
+    maxWait: 10000
+  jpa:
+    show-sql: true
+
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss  #日期格式化标准
+    default-property-inclusion: non_null  #返回json时 忽略null
