@@ -1,6 +1,7 @@
 package com.xmcc.entity;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.DynamicUpdate;
@@ -17,6 +18,7 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "order_detail")
+@Builder
 public class OrderDetail implements Serializable {
     /** 类目id. */
     @Id  //主键

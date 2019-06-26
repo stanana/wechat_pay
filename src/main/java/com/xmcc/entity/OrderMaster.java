@@ -1,6 +1,7 @@
 package com.xmcc.entity;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.DynamicUpdate;
@@ -18,6 +19,7 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "order_master")
+@Builder
 public class OrderMaster implements Serializable {
     @Id
     private String orderId;
@@ -32,9 +34,9 @@ public class OrderMaster implements Serializable {
 
     private BigDecimal orderAmount;
 
-    private Byte orderStatus;
+    private Integer orderStatus;
 
-    private Byte payStatus;
+    private Integer payStatus;
 
     private Date createTime;
 

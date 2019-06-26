@@ -2,6 +2,7 @@ package com.xmcc.entity;
 
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.DynamicUpdate;
@@ -21,6 +22,7 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name="product_info") //按照了去掉下划线首字母大写的规则 就可以不用指定
+@Builder
 public class ProductInfo implements Serializable {
 
     @Id
